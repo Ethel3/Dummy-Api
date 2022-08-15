@@ -1,5 +1,5 @@
 import express, { application } from "express";
-import { admitStudent, getAllStudent } from "../controllers/student.controllers.js";
+import { admitStudent, getAllStudent, updateStudent } from "../controllers/student.controllers.js";
 
 const StudentRoute = express.Router();
 
@@ -10,9 +10,7 @@ StudentRoute.post("/", admitStudent)
 StudentRoute.get("/", getAllStudent)
 
 //Update Student details
-StudentRoute.put("/", (req, res)=>{
-    res.send("Updated student details");
-})
+StudentRoute.put("/", updateStudent)
 
 //Dismiss student
 StudentRoute.delete("/", (req, res)=>{
