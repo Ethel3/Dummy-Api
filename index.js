@@ -1,26 +1,23 @@
 import express from "express";
 import dotenv from "dotenv";
-import FirstRoute from "./routes/first.routes.js";
+import StudentRoute from "./routes/student.routes.js";
 
 dotenv.config();
-const PORT = process.env.PORT || 3000;
-
 
 
 const app = express();
-app.use('/first', FirstRoute)
+app.use('/student', StudentRoute)
 
-app.post("/", (req, res) =>{
-   return  res.send("Pray for me")
-});
- app.put("/", (req, res) =>{
-    return res.send("Ready for something");
- });
+// home page
+app.get("/" , (req, res) => {
+    res.json({
+        message: "You're Welcome to my student API",
+        author:"Ethel"
+    })
+})
 
- app.delete("/", (req, res) => {
-    return res.send("Deleting old stuffs");
- });
 
+ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
    console.log(`App listening to ${PORT}!`),
 );
