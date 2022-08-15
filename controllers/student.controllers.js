@@ -1,4 +1,4 @@
-//admit new students
+// admit new students
 export const admitStudent = (req, res)=>{
     res.send("Add new student endpoint!");
 }
@@ -8,7 +8,12 @@ export const getAllStudent = (req, res)=>{
     res.send("All students in the school");
 }
 
-//update student details
+// update student details
 export const updateStudent = (req, res)=>{
     res.send("Updated student details");
+}
+
+// dismiss student
+export const deletestudent = (req, res)=>{
+    res.send("Dismissed student")
 }

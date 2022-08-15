@@ -1,5 +1,5 @@
 import express, { application } from "express";
-import { admitStudent, getAllStudent, updateStudent } from "../controllers/student.controllers.js";
+import { admitStudent, deletestudent, getAllStudent, updateStudent } from "../controllers/student.controllers.js";
 
 const StudentRoute = express.Router();
 
@@ -13,7 +13,5 @@ StudentRoute.get("/", getAllStudent)
 StudentRoute.put("/", updateStudent)
 
 //Dismiss student
-StudentRoute.delete("/", (req, res)=>{
-    res.send("Dismissed student")
-})
+StudentRoute.delete("/", deletestudent)
 export default StudentRoute
