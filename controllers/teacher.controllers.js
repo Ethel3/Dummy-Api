@@ -12,3 +12,8 @@ export const getAllTeacher = (req, res)=>{
 export const updateTeacher = (req, res)=>{
     res.send("Updated teacher details")
 }
+
+//dismiss teacher
+export const deleteTeacher =(req, res)=>{
+    res.send("Dismissed teacher")
+}
