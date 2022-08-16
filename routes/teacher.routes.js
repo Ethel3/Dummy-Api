@@ -12,3 +12,8 @@ TeacherRoute.post("/", (req, res)=>{
 TeacherRoute.get("/",(req, res)=>{
     res.send("These are all the staff members")
 })
+
+//Update teacher details
+TeacherRoute.put("/", (req, res)=>{
+    res.send("Updated teacher details")
+})
