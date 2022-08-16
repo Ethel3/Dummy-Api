@@ -17,3 +17,8 @@ TeacherRoute.get("/",(req, res)=>{
 TeacherRoute.put("/", (req, res)=>{
     res.send("Updated teacher details")
 })
+
+//dismiss teacher
+TeacherRoute.delete("/", (req, res)=>{
+    res.send("Dismissed teacher")
+})
