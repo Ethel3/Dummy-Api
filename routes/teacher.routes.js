@@ -1,9 +1,14 @@
 import express from "express";
 
 
-const teacherRoute = express.Router();
+const TeacherRoute = express.Router();
 
 // Admit new teachers
-teacherRoute.post("/", (req, res)=>{
+TeacherRoute.post("/", (req, res)=>{
     res.send("Admitted new teacher")
+})
+
+//get all teachers
+TeacherRoute.get("/",(req, res)=>{
+    res.send("These are all the staff members")
 })
