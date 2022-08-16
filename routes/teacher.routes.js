@@ -1,5 +1,5 @@
 import express from "express";
-import { adminTeacher } from "../controllers/teacher.controllers.js";
+import { adminTeacher, getAllTeacher } from "../controllers/teacher.controllers.js";
 
 
 const TeacherRoute = express.Router();
@@ -8,9 +8,7 @@ const TeacherRoute = express.Router();
 TeacherRoute.post("/", adminTeacher)
 
 //get all teachers
-TeacherRoute.get("/",(req, res)=>{
-    res.send("These are all the staff members")
-})
+TeacherRoute.get("/",getAllTeacher)
 
 //Update teacher details
 TeacherRoute.put("/", (req, res)=>{
