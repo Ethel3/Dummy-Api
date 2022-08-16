@@ -7,3 +7,8 @@ export const adminTeacher = (req, res)=>{
 export const getAllTeacher = (req, res)=>{
     res.send("These are all the staff members")
 }
+
+//update teacher details
+export const updateTeacher = (req, res)=>{
+    res.send("Updated teacher details")
+}
