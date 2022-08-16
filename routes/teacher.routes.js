@@ -1,5 +1,5 @@
 import express from "express";
-import { adminTeacher, getAllTeacher, updateTeacher } from "../controllers/teacher.controllers.js";
+import { adminTeacher, deleteTeacher, getAllTeacher, updateTeacher } from "../controllers/teacher.controllers.js";
 
 
 const TeacherRoute = express.Router();
@@ -14,6 +14,4 @@ TeacherRoute.get("/",getAllTeacher)
 TeacherRoute.put("/", updateTeacher)
 
 //dismiss teacher
-TeacherRoute.delete("/", (req, res)=>{
-    res.send("Dismissed teacher")
-})
+TeacherRoute.delete("/", deleteTeacher)
