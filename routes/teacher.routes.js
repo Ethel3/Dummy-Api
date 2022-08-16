@@ -1,12 +1,11 @@
 import express from "express";
+import { adminTeacher } from "../controllers/teacher.controllers.js";
 
 
 const TeacherRoute = express.Router();
 
 // Admit new teachers
-TeacherRoute.post("/", (req, res)=>{
-    res.send("Admitted new teacher")
-})
+TeacherRoute.post("/", adminTeacher)
 
 //get all teachers
 TeacherRoute.get("/",(req, res)=>{
