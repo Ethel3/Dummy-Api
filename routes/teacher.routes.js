@@ -15,4 +15,6 @@ TeacherRoute.put("/", updateTeacher)
 
 //dismiss teacher
 TeacherRoute.delete("/", deleteTeacher)
+
+
 export default TeacherRoute
