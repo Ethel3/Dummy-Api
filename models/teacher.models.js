@@ -14,5 +14,10 @@ const TeacherSchema = new mongoose.Schema({
         ref: "Teacher",
         required: [true, "teacher_id is required"],
         unique: true
+      },
+      year: {
+        type: Number,
+        required: true,
+        default: new Date().getFullYear()
       }
 })
