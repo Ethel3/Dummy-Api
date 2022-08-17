@@ -11,10 +11,10 @@ TeacherRoute.post("/", adminTeacher)
 TeacherRoute.get("/",getAllTeacher)
 
 //Update teacher details
-TeacherRoute.put("/", updateTeacher)
+TeacherRoute.put("/:id", updateTeacher)
 
 //dismiss teacher
-TeacherRoute.delete("/", deleteTeacher)
+TeacherRoute.delete("/:id", deleteTeacher)
 
 
 export default TeacherRoute
