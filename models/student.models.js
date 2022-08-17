@@ -10,7 +10,7 @@ name: {
     default: 0,
   },
   student_id: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "Student",
     required: [true, "Student is required"]
   },
@@ -21,4 +21,4 @@ name: {
   }
 });
 
-export default mongoose.model("Student", StudentSchema) 
+export default mongoose.model("Student", StudentSchema) ;
