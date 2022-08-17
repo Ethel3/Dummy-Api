@@ -5,7 +5,6 @@ import studentModels from "../models/student.models.js";
 export const admitStudent = async (req, res, next)=>{
     try{
     const student = await studentModels.create(req.body)
-    // res.send("Add new student endpoint!");
     res.status(200).json({
         success: true,
         total: student.length,
