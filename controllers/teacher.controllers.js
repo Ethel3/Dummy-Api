@@ -1,6 +1,19 @@
+import express from "express";
+import teacherModels from "../models/teacher.models.js"
+
 //admit new teachers
-export const adminTeacher = (req, res)=>{
-    res.send("Admitted new teacher")
+export const adminTeacher = async (req, res,next)=>{
+    try{
+        const student = await teacherModels.create(req.body)
+        res.status(200).json({
+            success: true,
+            total: teacher.length,
+            data: teacher,
+            message: "New teacher added successfully"
+        });
+    } catch (error){
+        next(error);
+      }
 }
 
 //get all teachers
