@@ -12,7 +12,8 @@ name: {
   student_id: {
     type: Number,
     ref: "Student",
-    required: [true, "Student is required"]
+    required: [true, "Student is required"],
+    unique: true
   },
   year:{
     type: Number,
