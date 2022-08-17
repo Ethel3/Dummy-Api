@@ -20,4 +20,6 @@ const TeacherSchema = new mongoose.Schema({
         required: true,
         default: new Date().getFullYear()
       }
-})
+});
+
+export default mongoose.model("Teacher", TeacherSchema);
