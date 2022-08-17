@@ -1,12 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
 import StudentRoute from "./routes/student.routes.js";
+import TeacherRoute from "./routes/teacher.routes.js";
 
 dotenv.config();
 
 
 const app = express();
 app.use('/student', StudentRoute)
+app.use('/teacher', TeacherRoute)
 
 // home page
 app.get("/" , (req, res) => {
