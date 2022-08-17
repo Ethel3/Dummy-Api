@@ -10,7 +10,7 @@ name: {
     default: 0,
   },
   student_id: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Number,
     ref: "Student",
     required: [true, "Student is required"]
   },
