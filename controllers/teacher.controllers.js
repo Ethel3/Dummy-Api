@@ -17,8 +17,19 @@ export const adminTeacher = async (req, res,next)=>{
 }
 
 //get all teachers
-export const getAllTeacher = (req, res)=>{
-    res.send("These are all the staff members")
+export const getAllTeacher = (req, res,next)=>{
+    try{
+        const student = await teacherModels.find()
+        res.status(200).json({
+            success: true,
+            total: teacher.length,
+            data: teacher,
+            message: "These are all the staff members"
+        });
+    } catch (error){
+        next(error);
+      }
+    res.send()
 }
 
 //update teacher details
