@@ -1,4 +1,4 @@
-import express, { application } from "express";
+import express from "express";
 import { admitStudent, deletestudent, getAllStudent, updateStudent } from "../controllers/student.controllers.js";
 
 const StudentRoute = express.Router();
