@@ -10,10 +10,10 @@ StudentRoute.post("/", admitStudent)
 StudentRoute.get("/", getAllStudent)
 
 //Update Student details
-StudentRoute.put("/", updateStudent)
+StudentRoute.put("/:id", updateStudent)
 
 //Dismiss student
-StudentRoute.delete("/", deletestudent)
+StudentRoute.delete("/:id", deletestudent)
 
 
 export default StudentRoute
