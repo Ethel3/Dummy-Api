@@ -14,4 +14,6 @@ StudentRoute.put("/", updateStudent)
 
 //Dismiss student
 StudentRoute.delete("/", deletestudent)
+
+
 export default StudentRoute
