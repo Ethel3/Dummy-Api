@@ -3,11 +3,11 @@ import dotenv from "dotenv";
 import StudentRoute from "./routes/student.routes.js";
 import TeacherRoute from "./routes/teacher.routes.js";
 import DBCONNECT from "./dbconnections.js";
+import bodyParser from "body-parser";
 
 dotenv.config();
-
-
 const app = express();
+app.use(bodyParser.json())
 app.use('/student', StudentRoute)
 app.use('/teacher', TeacherRoute)
 
