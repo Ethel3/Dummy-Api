@@ -9,4 +9,10 @@ const TeacherSchema = new mongoose.Schema({
         type: Number,
         default: 0,
       },
+      teacher_id:{
+        type: Number,
+        ref: "Teacher",
+        required: [true, "teacher_id is required"],
+        unique: true
+      }
 })
