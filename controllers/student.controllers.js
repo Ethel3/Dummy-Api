@@ -20,7 +20,7 @@ export const admitStudent = async (req, res, next)=>{
 // get all students
 export const getAllStudent = async (req, res, next)=>{
     try{
-        const student = await student.create(req.body)
+        const student = await studentModels.find()
         res.status(200).json({
             success: true,
             total: student.length,
