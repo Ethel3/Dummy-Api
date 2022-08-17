@@ -24,20 +24,43 @@ export const getAllStudent = async (req, res, next)=>{
         res.status(200).json({
             success: true,
             total: student.length,
-            data: student
+            data: student,
+            message: "All students in the school"
         });
     } catch (error){
         next(error);
       }
-    res.send("All students in the school");
 }
 
 // update student details
-export const updateStudent = (req, res)=>{
-    res.send("Updated student details");
+export const updateStudent = async (req, res, next)=>{
+    try{
+        const student = await studentModels.findByIdAndUpdate({_id: req.body.id})
+        res.status(200).json({
+            success: true,
+            total: student.length,
+            data: student,
+            message: "Updated students details in the school"
+        });
+    } catch (error){
+        next(error);
+      }
+  
 }
 
 // dismiss student
-export const deletestudent = (req, res)=>{
-    res.send("Dismissed student")
+export const deletestudent = async (req, res, next)=>{
+    try{
+        const student = await studentModels.findByIdAndDelete(req.params.id)
+        res.status(200).json({
+            success: true,
+            total: student.length,
+            data: student,
+            message: "Dismissed students details in the school"
+        });
+    } catch (error){
+        next(error);
+      }
+    
+    
 }
