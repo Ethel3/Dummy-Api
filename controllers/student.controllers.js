@@ -9,7 +9,8 @@ export const admitStudent = async (req, res, next)=>{
     res.status(200).json({
         success: true,
         total: student.length,
-        data: student
+        data: student,
+        message: "student added successfully"
     });
 } catch (error){
     next(error);
@@ -17,7 +18,17 @@ export const admitStudent = async (req, res, next)=>{
 }
 
 // get all students
-export const getAllStudent = (req, res)=>{
+export const getAllStudent = async (req, res, next)=>{
+    try{
+        const student = await student.create(req.body)
+        res.status(200).json({
+            success: true,
+            total: student.length,
+            data: student
+        });
+    } catch (error){
+        next(error);
+      }
     res.send("All students in the school");
 }
 
