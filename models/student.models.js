@@ -1,14 +1,24 @@
 import mongoose  from "mongoose";
 
-const StudentSchema = new mongoose.schema({  
+const StudentSchema = new mongoose.Schema({  
 name: {
     type: String,
-    required: true,
+    required: [true, "Name is required"]
   },
   age: {
     type: Number,
     default: 0,
   },
+  student_id: {
+    type: String,
+    ref: "Student",
+    required: [true, "Student is required"]
+  },
+  year:{
+    type: Number,
+    required: true,
+    default: new Date().getFullYear()
+  }
 });
 
-export default mongoose.models("Student", StudentSchema) 
+export default mongoose.model("Student", StudentSchema) 
