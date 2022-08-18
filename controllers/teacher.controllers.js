@@ -35,7 +35,7 @@ export const getAllTeacher = async (req, res,next)=>{
 //update teacher details
 export const updateTeacher = async (req, res, next)=>{
     try{
-        const student = await teacherModels.findByIdAndUpdate(req.body.id)
+        const student = await teacherModels.findByIdAndUpdate(req.body.id, req.body, {new:true})
         res.status(200).json({
             success: true,
             total: teacher.length,
