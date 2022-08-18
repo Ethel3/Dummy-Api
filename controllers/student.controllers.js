@@ -2,7 +2,7 @@ import express from "express";
 import studentModels from "../models/student.models.js";
 
 // admit new students
-export const admitStudent = async (req, res, next)=>{
+export const admitStudent = async (req, res, next)=>{ 
     try{
     const student = await studentModels.create(req.body)
     res.status(200).json({
