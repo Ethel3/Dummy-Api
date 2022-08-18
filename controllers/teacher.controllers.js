@@ -33,7 +33,7 @@ export const getAllTeacher = async (req, res,next)=>{
 }
 
 //update teacher details
-export const updateTeacher = (req, res, next)=>{
+export const updateTeacher = async (req, res, next)=>{
     try{
         const student = await teacherModels.findByIdAndUpdate({_id: req.body.id})
         res.status(200).json({
@@ -48,7 +48,7 @@ export const updateTeacher = (req, res, next)=>{
 }
 
 //dismiss teacher
-export const deleteTeacher =(req, res, next)=>{
+export const deleteTeacher = async (req, res, next)=>{
     try{
         const teacher = await teacherModels.findByIdAndDelete(req.params.id)
         res.status(200).json({
