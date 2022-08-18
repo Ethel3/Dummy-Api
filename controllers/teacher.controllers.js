@@ -29,12 +29,22 @@ export const getAllTeacher = (req, res,next)=>{
     } catch (error){
         next(error);
       }
-    res.send()
+  
 }
 
 //update teacher details
 export const updateTeacher = (req, res)=>{
-    res.send("Updated teacher details")
+    try{
+        const student = await teacherModels.findByIdAndUpdate({_id: req.body.id})
+        res.status(200).json({
+            success: true,
+            total: teacher.length,
+            data: teacher,
+            message: "Updated Teacher details"
+        });
+    } catch (error){
+        next(error);
+      }
 }
 
 //dismiss teacher
