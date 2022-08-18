@@ -49,5 +49,15 @@ export const updateTeacher = (req, res)=>{
 
 //dismiss teacher
 export const deleteTeacher =(req, res)=>{
-    res.send("Dismissed teacher")
+    try{
+        const teacher = await teacherModels.findByIdAndDelete(req.params.id)
+        res.status(200).json({
+            success: true,
+            total: teacher.length,
+            data: teacher,
+            message: "Deleted teacher details in the school"
+        });
+    } catch (error){
+        next(error);
+      }
 }
