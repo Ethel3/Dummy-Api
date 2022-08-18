@@ -4,7 +4,7 @@ import teacherModels from "../models/teacher.models.js"
 //admit new teachers
 export const adminTeacher = async (req, res,next)=>{
     try{
-        const student = await teacherModels.create(req.body)
+        const teacher = await teacherModels.create(req.body)
         res.status(200).json({
             success: true,
             total: teacher.length,
