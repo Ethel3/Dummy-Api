@@ -12,7 +12,7 @@ app.use('/student', StudentRoute)
 app.use('/teacher', TeacherRoute)
 
 // home page
-app.get("/" , (req, res) => {
+app.get("/" , (req, res, next) => {
     res.json({
         message: "You're Welcome to my student API",
         author:"Ethel"
