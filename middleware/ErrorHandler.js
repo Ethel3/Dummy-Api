@@ -5,4 +5,9 @@ const Handler = (err, req, res, next)=> {
     if(ProcessingInstruction.env.NODE_ENV == "development"){
         stack = err.stack
     }
+    res.status(sc).json({
+        success: false,
+        message: msg,
+        stack: stack
+    })
 }
