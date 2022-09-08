@@ -5,11 +5,15 @@ name: {
     type: String,
     required: [true, "Name is required"]
   },
+  lastName:{
+    type: String,
+    required: [true, "Last Name is required"]
+  },
   age: {
     type: Number,
     default: 0,
   },
-  student_id: {
+ _classId: {
     type: Number,
     ref: "Student",
     required: [true, "Student_id is required"],
