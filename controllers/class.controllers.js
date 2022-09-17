@@ -16,14 +16,14 @@ export const getClass = async (req, res, next)=>{
   }
 }
 //creating new class
-export const createClass = async (req, res, next)=>{ 
+export const addNewClass = async (req, res, next)=>{ 
     try{
-    const classes = await ClassModels.find(req.body)
+    const classes = await ClassModels.create(req.body)
     res.status(200).json({
         success: true,
         total: classes.length,
         data: classes,
-        message: "Created new class number "
+        message: "Created New class number "
     });
 } catch (error){
     next(error);
