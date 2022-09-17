@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json())
 app.use('/student', StudentRoute)
 app.use('/teacher', TeacherRoute)
-app.use('/class', classModels)
+app.use('/class', ClassRoute)
 
 // home page
 app.get("/" , (req, res, next) => {
