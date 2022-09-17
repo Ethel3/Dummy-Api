@@ -1,7 +1,7 @@
 import express from "express";
 import ClassModels from "../models/class.models.js";
 
-
+//get class members
 export const getClass = async (req, res, next)=>{ 
     try{
     const classes = await ClassModels.find(req.body)
