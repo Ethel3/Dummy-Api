@@ -5,6 +5,8 @@ const ClassRoute = express.Router();
 
 // Get all students
 ClassRoute.get("/", getClass)
+//Create new class
+ClassRoute.push("/", createClass)
 //Update class 
 ClassRoute.put("/", updateClass)
 //delete class
