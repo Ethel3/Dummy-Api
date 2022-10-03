@@ -1,16 +1,16 @@
 import express from "express";
-import { deleteClass, createClass, getClass, updateClass } from "../controllers/class.controllers.js";
+import { deleteClass, getClass, updateClass, addNewClass } from "../controllers/class.controllers.js";
 
 const ClassRoute = express.Router();
 
 // Get all students
 ClassRoute.get("/", getClass)
 //Create new class
-ClassRoute.push("/", createClass)
+ClassRoute.post("/", addNewClass)
 //Update class 
-ClassRoute.put("/", updateClass)
+ClassRoute.put("/:id", updateClass)
 //delete class
-ClassRoute.delete("/", deleteClass)
+ClassRoute.delete("/:id", deleteClass)
 
 
 export default ClassRoute
