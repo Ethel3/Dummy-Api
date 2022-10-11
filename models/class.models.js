@@ -9,6 +9,10 @@ name: {
 numberofStudents:{
     type: Number,
     minlength: 3
+},
+numberofRows:{
+    type: Number,
+    minlength: 5
 }
 })
 
