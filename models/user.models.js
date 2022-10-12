@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-    full_name: {
+    fullname: {
         type: String,
         required: [true, "Please enter full name"],
     },
@@ -15,14 +15,14 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Please enter your email"],
         unique: true,
     },
-    refresh_token: {
+    refreshtoken: {
         type: String
     },
     password: {
         type: String,
         required: [true, "Please enter password"]
     },
-    is_deleted: {
+    isdeleted: {
         type: String,
     },
     token: {
