@@ -17,3 +17,16 @@ export const Login = async (req, res, next)=>{
     next(error);
   }
 }
+
+// add user
+export const addUser = async (req, res, next)=>{
+    try{
+        const { fullname, username, email} = req.body;
+        if (!fullname || !username || !email || !req.body.password){
+        res.status(400)
+        next (createError("Please fill all fields", 400))   
+        }
+    
+        //
+      }
+    }
