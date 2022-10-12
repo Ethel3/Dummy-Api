@@ -24,5 +24,10 @@ const UserSchema = new mongoose.Schema({
     },
     is_deleted: {
         type: String,
+    },
+    token: {
+        type: String,
     }
-})
+}, {timestamps: true})
+
+export default mongoose.model("User", UserSchema);
