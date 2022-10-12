@@ -27,6 +27,11 @@ export const addUser = async (req, res, next)=>{
         next (createError("Please fill all fields", 400))   
         }
     
-        //
+        //Existing user
+        const userExists = await UserSchema.find({email})
+        if (userExists){
+            res.status(401)// this should not work
+            next (createError("User already exists", 400))
+        }
       }
     }
