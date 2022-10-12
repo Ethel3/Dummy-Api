@@ -15,5 +15,14 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Please enter your email"],
         unique: true,
     },
-    
+    refresh_token: {
+        type: String
+    },
+    password: {
+        type: String,
+        required: [true, "Please enter password"]
+    },
+    is_deleted: {
+        type: String,
+    }
 })
