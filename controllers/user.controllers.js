@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs"
 
 
 
-// login user
+// Register user
 export const Register = async (req, res, next)=>{ 
     const { username } = req.body;
 
@@ -65,3 +65,6 @@ export const addUser = async (req, res, next)=>{
         console.log(error);
     }
     
+
+
+    //Login user
