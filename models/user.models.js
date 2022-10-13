@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const UserSchema = new mongoose.Schema({
     fullname: {
         type: String,
+        default: null,
         required: [true, "Please enter full name"],
     },
     username: {
