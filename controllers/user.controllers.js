@@ -1,8 +1,11 @@
 import express from "express";
-import UserSchema from "../models/user.models.js";
+import UserSchema from "../models/user.models.js"
+import bcrypt from "bcryptjs"
+
+
 
 // login user
-export const Login = async (req, res, next)=>{ 
+export const Register = async (req, res, next)=>{ 
     const { username } = req.body;
 
     try{
@@ -32,7 +35,7 @@ export const addUser = async (req, res, next)=>{
         const userExists = await UserSchema.findOne({ email })
         if (userExists) {
             res.status(409)// this should not work
-            next(CreateError("User already exists. Please Login", 400))
+            next(CreateError("User already exists. Please Register", 400))
         }
       } 
       //Encrypt user password
@@ -53,6 +56,12 @@ export const addUser = async (req, res, next)=>{
             expiresIn: "2h",
         }
       );
-      //
+      //save user token
+      user.token = token;
+
+      //rerturn new user
+      res.status(201).json(user);
+    } catch (error){
+        console.log(error);
     }
     
