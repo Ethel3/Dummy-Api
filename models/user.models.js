@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-    fullname: {
+    ful_lname: {
         type: String,
         default: null,
         required: [true, "Please enter full name"],
@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please enter password"]
     },
-    isdeleted: {
+    is_deleted: {
         type: String,
     },
     token: {
