@@ -28,14 +28,23 @@ export const addUser = async (req, res, next)=>{
         next(CreateError("All inputs are required", 400))   
         }
     
-        //Existing user
+        //Validate if user exist in the database 
         const userExists = await UserSchema.findOne({ email })
         if (userExists) {
             res.status(409)// this should not work
             next(CreateError("User already exists. Please Login", 400))
         }
-      } catch (error){
-        next(error)
-      }
+      } 
+      //Encrypt user password
+      encryptedPassword = await bcrypt.hash(password, 10);
+
+      //create user in our database
+      const user = await UserSchema.create({
+        fullname,
+        email: email.toLowerCase(), // sanitize: convert email to lower
+        password: encryptedPassword,
+      });
+
+      //create token
     }
     
