@@ -82,8 +82,8 @@ export const addUser = async (req, res, next)=>{
         }
 
         //
-        let salt = bcrypt.genSaltSync(10);
-        let hash = bcrypt.hashSync(req.body.password, salt); //Encrypt password
+       
+        let hash = bcrypt.hashSync(req.body.password); //Encrypt password
         const newUser = await UserSchema.create({
             full_name,
             username,
