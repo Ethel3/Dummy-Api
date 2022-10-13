@@ -46,5 +46,13 @@ export const addUser = async (req, res, next)=>{
       });
 
       //create token
+      const token = jwt.sign(
+        {user_id: user_id, email},
+        process.env.TOKEN_KEY,
+        {
+            expiresIn: "2h",
+        }
+      );
+      //
     }
     
