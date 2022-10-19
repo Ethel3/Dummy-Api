@@ -4,6 +4,8 @@ import StudentRoute from "./routes/student.routes.js";
 import TeacherRoute from "./routes/teacher.routes.js";
 import ClassRoute from "./routes/class.routes.js";
 import DBCONNECT from "./dbconnections.js";
+import refreshRouter from "./routes/refreshtoken.routes.js";
+import logoutRouter from "./routes/logout.routes.js";
 import bodyParser from "body-parser";
 
 
