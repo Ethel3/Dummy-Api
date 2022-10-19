@@ -15,6 +15,10 @@ app.use(bodyParser.json())
 app.use('/student', StudentRoute)
 app.use('/teacher', TeacherRoute)
 app.use('/class', ClassRoute)
+app.use('/refresh', refreshRouter)
+app.use('/logout', logoutRouter)
+
+app.use(Handler)
 
 // home page
 app.get("/" , (req, res, next) => {
