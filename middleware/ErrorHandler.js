@@ -1,4 +1,4 @@
-const Handler = (err, req, res, next)=> {
+const errorHandler = (err, req, res, next)=> {
     const sc = err.statusCode || 500
     const msg = err.message || "Something went wrong"
     var stack = ""
@@ -11,3 +11,5 @@ const Handler = (err, req, res, next)=> {
         stack: stack
     })
 }
+
+export default errorHandler;
