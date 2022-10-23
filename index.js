@@ -4,6 +4,7 @@ import StudentRoute from "./routes/student.routes.js";
 import TeacherRoute from "./routes/teacher.routes.js";
 import ClassRoute from "./routes/class.routes.js";
 import DBCONNECT from "./dbconnections.js";
+import errorHandler from "./middleware/ErrorHandler.js"
 import refreshRouter from "./routes/refreshtoken.routes.js";
 import logoutRouter from "./routes/logout.routes.js";
 import bodyParser from "body-parser";
@@ -18,8 +19,7 @@ app.use('/class', ClassRoute)
 app.use('/refresh', refreshRouter)
 app.use('/logout', logoutRouter)
 
-app.use(Handler)
-
+app.use(errorHandler)
 // home page
 app.get("/" , (req, res, next) => {
     res.json({
