@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
-    ful_lname: {
+    full_name: {
         type: String,
         default: null,
         required: [true, "Please enter full name"],
