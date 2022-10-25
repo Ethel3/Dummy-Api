@@ -3,11 +3,13 @@ import dotenv from "dotenv";
 import StudentRoute from "./routes/student.routes.js";
 import TeacherRoute from "./routes/teacher.routes.js";
 import ClassRoute from "./routes/class.routes.js";
+import UserRoute from "./routes/user.routes.js";
 import DBCONNECT from "./dbconnections.js";
 import errorHandler from "./middleware/ErrorHandler.js"
 import refreshRouter from "./routes/refreshtoken.routes.js";
 import logoutRouter from "./routes/logout.routes.js";
 import bodyParser from "body-parser";
+
 
 
 dotenv.config();
@@ -16,6 +18,7 @@ app.use(bodyParser.json())
 app.use('/student', StudentRoute)
 app.use('/teacher', TeacherRoute)
 app.use('/class', ClassRoute)
+app.use('/user', UserRoute)
 app.use('/refresh', refreshRouter)
 app.use('/logout', logoutRouter)
 
