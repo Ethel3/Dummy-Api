@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 import StudentRoute from "./routes/student.routes.js";
 import TeacherRoute from "./routes/teacher.routes.js";
 import ClassRoute from "./routes/class.routes.js";
