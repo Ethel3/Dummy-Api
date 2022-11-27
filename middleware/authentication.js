@@ -18,4 +18,7 @@ export const verifyAccessToken = (
     }catch(err){
         next(err)
     }
+    if (!token){
+        CreateError("No token", 403);
+    }
 }
