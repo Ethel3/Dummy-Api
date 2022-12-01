@@ -5,12 +5,13 @@ import userModels from "../models/user.models.js";
 
 // register
 export const register = async (req, res, next) => {
-    const { username, email, password, name } = req.body;
+    const { username,full_name, email, password, name } = req.body;
     var salt = bcrypt.genSaltSync(10);
     var hash = bcrypt.hashSync(password, salt);
     try {
       const user = new user({
         username,
+        full_name,
         email,
         password: hash,
         name,
