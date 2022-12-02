@@ -23,6 +23,9 @@ export const register = async (req, res, next) => {
     }
   };
 
-
+//signin
+export const signin = async (req, res, next)=>{
+    const { username } = req.body
+}
 
 
