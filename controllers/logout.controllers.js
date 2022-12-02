@@ -37,8 +37,11 @@ export const signin = async (req, res, next)=>{
             {id:user._id},
             process.env.JWT_SECRET
         );
-        
-    }
+        const { password, ...userData } = user._doc;
+        res.cookie("access_token", token, {httpOnly:true}).status(200).json({...userData});
+     }catch (err){
+        next(err);
+     }
 }
 
 
