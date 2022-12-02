@@ -25,7 +25,13 @@ export const register = async (req, res, next) => {
 
 //signin
 export const signin = async (req, res, next)=>{
-    const { username } = req.body
+    const { username } = req.body;
+    try{
+        const user = await userModels.findOne({ username });
+        if (!user) return next(CreateError("User not found", 404));
+        if (!bcrypt.compareSync(req.body.password, user.password))
+        return next (CreateError("Incorrect name or password", 401));
+    }
 }
 
 
