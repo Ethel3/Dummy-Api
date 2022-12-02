@@ -31,6 +31,13 @@ export const signin = async (req, res, next)=>{
         if (!user) return next(CreateError("User not found", 404));
         if (!bcrypt.compareSync(req.body.password, user.password))
         return next (CreateError("Incorrect name or password", 401));
+
+        //token
+        const token = jwt.sign(
+            {id:user._id},
+            process.env.JWT_SECRET
+        );
+        
     }
 }
 
