@@ -57,6 +57,13 @@ export const logout = async (req, res, next)=>{
             });
         }
         await userModels.findByIdAndUpdate(user._id, { token });
+        res.clearCookie("refresh_token");
+        res.status(200).json({
+            success: true,
+            message: "User logged out successfully",
+        })
+    }catch (err){
+        next(err);
     }
 }
 
