@@ -23,8 +23,8 @@ export const register = async (req, res, next) => {
     }
   };
 
-//signin
-export const signin = async (req, res, next)=>{
+//login
+export const login = async (req, res, next)=>{
     const { username } = req.body;
     try{
         const user = await userModels.findOne({ username });
@@ -42,6 +42,15 @@ export const signin = async (req, res, next)=>{
      }catch (err){
         next(err);
      }
+}
+
+//logout 
+export const logout = async (req, res, next)=>{
+    const refresh_token = req.cookies?.refresh_token;
+    console.log(refresh_token);
+    try{
+        const user = await userModels.findOne({token});
+    }
 }
 
 
