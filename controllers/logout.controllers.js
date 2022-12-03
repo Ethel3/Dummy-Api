@@ -50,6 +50,13 @@ export const logout = async (req, res, next)=>{
     console.log(refresh_token);
     try{
         const user = await userModels.findOne({token});
+        if(!user){
+            return res.status(404).json({
+                success: false,
+                message: "User not found",
+            });
+        }
+        await userModels.findByIdAndUpdate(user._id, { token });
     }
 }
 
