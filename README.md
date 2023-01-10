@@ -15,3 +15,7 @@ The following tools were used in this project:
 - [Express.js](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [JavaScript](https://javascript.info/)
+
+
+Made with :heart: by 
+- [x] [Akrasi Ethel Akosua](https://github.com/Ethel3)
