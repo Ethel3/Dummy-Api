@@ -19,3 +19,7 @@ The following tools were used in this project:
 
 Made with :heart: by 
 - [x] [Akrasi Ethel Akosua](https://github.com/Ethel3)
+
+&#xa0;
+
+<a href="#top">Back to top</a>
