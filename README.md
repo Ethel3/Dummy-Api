@@ -1,7 +1,9 @@
-# Dummy-Api
+
 <div align="center" id="top"> 
   <img src="./.github/app.gif" alt="Dummy-Api" />
 </div>
+
+<h1 align="center">Dummy-Api</h1>
 ## : About ##
 
 Describe your project
