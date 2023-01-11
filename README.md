@@ -21,6 +21,12 @@ The following tools were used in this project:
 - [JavaScript](https://javascript.info/)
 
 
+## :white_check_mark: Requirements ##
+
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+
+
+
 Made with :heart: by 
 - [x] [Akrasi Ethel Akosua](https://github.com/Ethel3)
 
