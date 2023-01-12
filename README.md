@@ -39,6 +39,8 @@ $ npm
 # Run the project
 $ npm start 
 
+# The server will initialize in the <http://localhost:3001>
+
 
 Made with :heart: by 
 - [x] [Akrasi Ethel Akosua](https://github.com/Ethel3)
