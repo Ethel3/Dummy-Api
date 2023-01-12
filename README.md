@@ -12,6 +12,8 @@
  <a href="https://github.com/Ethel3/Dummy-Api" target="_blank">Author</a>
 </p>
 
+<br>
+
 
 ## : About ##
 
