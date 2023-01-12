@@ -36,6 +36,9 @@ $ cd Dummy-Api
 # Install dependencies
 $ npm
 
+# Run the project
+$ npm start 
+
 
 Made with :heart: by 
 - [x] [Akrasi Ethel Akosua](https://github.com/Ethel3)
