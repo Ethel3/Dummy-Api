@@ -33,6 +33,9 @@ $ git clone https://github.comEthel3/Dummy-Api.git
 # Access
 $ cd Dummy-Api
 
+# Install dependencies
+$ npm
+
 
 Made with :heart: by 
 - [x] [Akrasi Ethel Akosua](https://github.com/Ethel3)
