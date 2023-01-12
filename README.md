@@ -4,6 +4,11 @@
 </div>
 
 <h1 align="center">Dummy-Api</h1>
+
+<p align="center">
+</p>
+
+
 ## : About ##
 
 Describe your project
@@ -40,6 +45,7 @@ $ npm
 $ npm start 
 
 # The server will initialize in the <http://localhost:3001>
+```
 
 
 Made with :heart: by 
