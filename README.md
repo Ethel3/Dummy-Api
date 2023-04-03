@@ -19,7 +19,7 @@
 
 Describe your project
 
-- [x] This Project is a a School Database System.
+- [x] This Project is a School Database System.
 That helps to organize Teacher-Student Data .
 
 ## : Technologies ##
