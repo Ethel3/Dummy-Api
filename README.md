@@ -21,7 +21,7 @@ Describe your project
 
 - [x] This Project is a School Database System that helps to organize Teacher-Student Data .
 
-## : Technologies ##
+##Technologies ##
 
 The following tools were used in this project:
 
